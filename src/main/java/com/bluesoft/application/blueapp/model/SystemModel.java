@@ -1,4 +1,4 @@
-package com.bluesoft.application.blueapp;
+package com.bluesoft.application.blueapp.model;
 
 public class SystemModel {
 
