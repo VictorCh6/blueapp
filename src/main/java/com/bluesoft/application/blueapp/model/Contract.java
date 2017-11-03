@@ -4,24 +4,24 @@ import java.util.Date;
 
 public class Contract {
 
-	String system;
+	String number;
+	SystemModel system;
 	Date startDate;
 	Date endDate;
 	Long value;
 	String  period;
 	Boolean isActive;
-	
-	String number;
+
 	public String getNumber() {
 		return number;
 	}
 	public void setNumber(String number) {
 		this.number = number;
 	}
-	public String getSystem() {
+	public SystemModel getSystem() {
 		return system;
 	}
-	public void setSystem(String system) {
+	public void setSystem(SystemModel system) {
 		this.system = system;
 	}
 	public Date getStartDate() {
