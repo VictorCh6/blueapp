@@ -31,6 +31,7 @@ public class ContractDaoImpl implements ContractDao {
 	}
 
 	public void deactivateContract(Contract contract) {
-		sessionFactory.getCurrentSession().update(contract);
+		//sessionFactory.getCurrentSession().update(contract);
+		sessionFactory.getCurrentSession().createQuery("UPDATE postgres.contracts SET isActive=false");
 	}
 }
