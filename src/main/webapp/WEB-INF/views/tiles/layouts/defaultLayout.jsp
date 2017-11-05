@@ -15,7 +15,11 @@
 	<script src="http://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 	<script>
 		$(document).ready(function() {
-			$('#example').DataTable();
+			$('#example').DataTable({
+				"language":{
+					"url": "//cdn.datatables.net/plug-ins/1.10.16/i18n/Polish.json"
+				}
+			});
 		});
 	</script>
 
