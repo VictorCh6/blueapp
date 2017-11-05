@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" 
+	 "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+	<!-- Base Definition -->
+	<definition name="base-definition"
+       template="/WEB-INF/views/tiles/layouts/defaultLayout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/views/tiles/template/defaultHeader.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/views/tiles/template/defaultMenu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/views/tiles/template/defaultFooter.jsp" />
+	</definition>
+	<!-- Active Contracts -->
+	<definition name="activeContracts" extends="base-definition">
+		<put-attribute name="title" value="Aktywne umowy" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/activeContracts.jsp" />
+	</definition>
+	<!-- All Contracts -->
+	<definition name="contracts" extends="base-definition">
+		<put-attribute name="title" value="Wszystkie umowy" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/contracts.jsp" />
+	</definition>
+	<!-- Systems -->
+	<definition name="products" extends="base-definition">
+		<put-attribute name="title" value="Products" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/systems.jsp" />
+	</definition>
+	<!-- About -->
+	<definition name="about" extends="base-definition">
+		<put-attribute name="title" value="O aplikacji" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/about.jsp" />
+	</definition>
+		<!-- Add Contract -->
+	<definition name="addContract" extends="base-definition">
+		<put-attribute name="title" value="Dodaj umowę" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/addContract.jsp" />
+	</definition>
+		<!-- Update Contract -->
+	<definition name="updateContract" extends="base-definition">
+		<put-attribute name="title" value="Zaktualizuj umowę" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/updateContract.jsp" />
+	</definition>
+		<!-- Deactivate Contract -->
+	<definition name="deactivateContract" extends="base-definition">
+		<put-attribute name="title" value="Dezaktywuj umowę" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/deactivateContract.jsp" />
+	</definition>
+		<!-- Product Page -->
+	<definition name="success" extends="base-definition">
+		<put-attribute name="title" value="Sukces" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/success.jsp" />
+	</definition>
+</tiles-definitions>
