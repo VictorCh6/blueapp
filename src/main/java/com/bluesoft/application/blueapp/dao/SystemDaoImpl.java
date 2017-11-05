@@ -6,9 +6,11 @@ import javax.persistence.TypedQuery;
 
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import com.bluesoft.application.blueapp.model.SystemModel;
 
+@Repository
 public class SystemDaoImpl implements SystemDao {
 	
 	@Autowired
@@ -32,7 +34,7 @@ public class SystemDaoImpl implements SystemDao {
 	}
 
 	@Override
-	public void deleteSystem(SystemModel systemModel) {
-		sessionFactory.getCurrentSession().delete(systemModel);
+	public void deleteSystem(String name) {
+		sessionFactory.getCurrentSession().delete(name);
 	}
 }

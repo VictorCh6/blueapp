@@ -12,5 +12,5 @@ public interface SystemService {
 	
 	public void updateSystem(SystemModel systemModel);
 	
-	public void deleteSystem(SystemModel systemModel);
+	public void deleteSystem(String name);
 }

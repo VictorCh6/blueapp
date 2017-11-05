@@ -15,6 +15,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import static org.hibernate.cfg.Environment.*;
 
 import com.bluesoft.application.blueapp.model.Contract;
+import com.bluesoft.application.blueapp.model.SystemModel;
 
 @Configuration
 @PropertySource("classpath:db.properties")
@@ -50,7 +51,7 @@ public class AppConfig {
 		props.put(C3P0_MAX_STATEMENTS, env.getProperty("hibernate.c3p0.max_statements"));
 		
 		factoryBean.setHibernateProperties(props);
-		factoryBean.setAnnotatedClasses(Contract.class);
+		factoryBean.setAnnotatedClasses(Contract.class, SystemModel.class);
 		return factoryBean;
 	}
 	

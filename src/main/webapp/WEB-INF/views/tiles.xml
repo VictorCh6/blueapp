@@ -21,34 +21,44 @@
 		<put-attribute name="title" value="Wszystkie umowy" />
 		<put-attribute name="body" value="/WEB-INF/views/pages/contracts.jsp" />
 	</definition>
-	<!-- Systems -->
-	<definition name="products" extends="base-definition">
-		<put-attribute name="title" value="Products" />
-		<put-attribute name="body" value="/WEB-INF/views/pages/systems.jsp" />
-	</definition>
 	<!-- About -->
 	<definition name="about" extends="base-definition">
 		<put-attribute name="title" value="O aplikacji" />
 		<put-attribute name="body" value="/WEB-INF/views/pages/about.jsp" />
 	</definition>
-		<!-- Add Contract -->
+	<!-- Add Contract -->
 	<definition name="addContract" extends="base-definition">
 		<put-attribute name="title" value="Dodaj umowę" />
 		<put-attribute name="body" value="/WEB-INF/views/pages/addContract.jsp" />
 	</definition>
-		<!-- Update Contract -->
+	<!-- Update Contract -->
 	<definition name="updateContract" extends="base-definition">
 		<put-attribute name="title" value="Zaktualizuj umowę" />
 		<put-attribute name="body" value="/WEB-INF/views/pages/updateContract.jsp" />
 	</definition>
-		<!-- Deactivate Contract -->
+	<!-- Deactivate Contract -->
 	<definition name="deactivateContract" extends="base-definition">
 		<put-attribute name="title" value="Dezaktywuj umowę" />
 		<put-attribute name="body" value="/WEB-INF/views/pages/deactivateContract.jsp" />
 	</definition>
-		<!-- Product Page -->
-	<definition name="success" extends="base-definition">
-		<put-attribute name="title" value="Sukces" />
-		<put-attribute name="body" value="/WEB-INF/views/pages/success.jsp" />
+	<!-- Systems -->
+	<definition name="systems" extends="base-definition">
+		<put-attribute name="title" value="Systemy" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/systems.jsp" />
+	</definition>
+	<!-- Add System -->
+	<definition name="addSystem" extends="base-definition">
+		<put-attribute name="title" value="Dodaj system" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/addSystem.jsp" />
+	</definition>
+	<!-- Update System -->
+	<definition name="updateSystem" extends="base-definition">
+		<put-attribute name="title" value="Zaktualizuj system" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/updateSystem.jsp" />
+	</definition>
+	<!-- Delete System -->
+	<definition name="deleteSystem" extends="base-definition">
+		<put-attribute name="title" value="Usuń system" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/deleteSystem.jsp" />
 	</definition>
 </tiles-definitions>

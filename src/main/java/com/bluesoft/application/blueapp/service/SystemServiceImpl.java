@@ -31,7 +31,7 @@ public class SystemServiceImpl implements SystemService {
 	}
 
 	@Transactional
-	public void deleteSystem(SystemModel systemModel) {
-		systemDao.deleteSystem(systemModel);
+	public void deleteSystem(String name) {
+		systemDao.deleteSystem(name);
 	}
 }
