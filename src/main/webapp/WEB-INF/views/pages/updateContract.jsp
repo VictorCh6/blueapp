@@ -1,50 +1,72 @@
 <%@ include file="/WEB-INF/views/tiles/template/taglibs.jsp" %>
-<section class="container">
+<%@ include file="/WEB-INF/views/tiles/template/selectmenu.jsp" %>
+
+<section class="container text-center">
+	<form:form action="updateContract" method="post" modelAttribute="contract" class="form-horizontal">
 		<fieldset>
-			<legend>System Input From</legend>
-			<form:form action="addContract" method="post" modelAttribute="contract" class="form-horizontal">
-				<table>
-					<tr>
-						<th>Numer</th>
-						<td>
-							<form:input path="number" />
-							<form:errors path="number" cssClass="error" />
-						</td>
-						<th>System</th>
-						<td>
-							<form:input path="system" />
-							<form:errors path="system" cssClass="error" />
-						</td>
-						<th>Data od</th>
-						<td>
-							<form:input path="startDate" />
-							<form:errors path="startDate" cssClass="error" />
-						</td>
-						<th>Data do</th>
-						<td>
-							<form:input path="endDate" />
-							<form:errors path="endDate" cssClass="error" />
-						</td>
-						<th>Wartość</th>
-						<td>
-							<form:input path="value" />
-							<form:errors path="value" cssClass="error" />
-						</td>
-						<th>Okres</th>
-						<td>
-							<form:input path="period" />
-							<form:errors path="period" cssClass="error" />
-						</td>
-						<th>Aktywna</th>
-						<td>
-							<form:radiobutton path="isActive" value="true" />TAK
-							<form:radiobutton path="isActive" value="false" />NIE
-						</td>
-						<td>
-							<button type="submit">Submit</button>
-						</td>
-					</tr>
-				</table>
-			</form:form>
+			<legend>Edytuj kontrakt</legend>
+			<div class=form-group>
+				<label>Numer</label>
+				<div>
+					<form:input path="number" />
+					<form:errors path="number" cssClass="error" />
+				</div>
+			</div>
+			<div class=form-group>
+				<label>System</label>
+				<div>
+					<form:select path="system" id="systemSelect">
+						<c:forEach items="${systems}" var="system">
+							<option>${system.name}</option>
+						</c:forEach>
+					</form:select>
+					<form:errors path="system" cssClass="error" />
+				</div>
+			</div>
+			<div class=form-group>
+				<label>Data od</label>
+				<div>
+					<form:input path="startDate" placeholder="YYYY/MM/DD"/>
+					<form:errors path="startDate" cssClass="error" />
+				</div>
+			</div>
+			<div class=form-group>
+				<label>Data do</label>
+				<div>
+					<form:input path="endDate" placeholder="YYYY/MM/DD"/>
+					<form:errors path="endDate" cssClass="error" />
+				</div>
+			</div>
+			<div class=form-group>
+				<label>Wartość</label>
+				<div>
+					<form:input path="value" />
+					<form:errors path="value" cssClass="error" />
+				</div>
+			</div>
+			<div class=form-group>
+				<label>Okres</label>
+				<div>
+					<form:select path="period" id="period">
+						<option value ="MONTH">Miesiąc</option>
+						<option value ="QUARTER">Kwartał</option>
+						<option value ="YEAR">Rok</option>
+					</form:select>
+					<form:errors path="period" cssClass="error" />
+				</div>
+			</div>
+			<div class=form-group>
+				<label>Aktywna</label>
+				<div>
+					<form:radiobutton path="isActive" value="true" />TAK
+							
+					<form:radiobutton path="isActive" value="false" />NIE
+					
+				</div>
+			</div>
+			<div class=form-group>
+				<input type="submit" id="btnAdd" class="btn btn-primary" value ="Dokonaj edycji"/>
+			</div>
 		</fieldset>
-	</section>
+	</form:form>
+</section>

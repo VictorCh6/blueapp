@@ -6,6 +6,8 @@ import com.bluesoft.application.blueapp.model.SystemModel;
 
 public interface SystemService {
 	
+	public SystemModel getSystemByName(String name);
+	
 	public void addSystem(SystemModel systemModel);
 	
 	public List<SystemModel> getAllSystems();

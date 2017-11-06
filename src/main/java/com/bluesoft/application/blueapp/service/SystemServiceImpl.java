@@ -8,7 +8,10 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.bluesoft.application.blueapp.dao.SystemDao;
 import com.bluesoft.application.blueapp.model.SystemModel;
-
+/**
+ * @author Victor Chukwu
+ *
+ */
 @Service
 public class SystemServiceImpl implements SystemService {
 	
@@ -33,5 +36,10 @@ public class SystemServiceImpl implements SystemService {
 	@Transactional
 	public void deleteSystem(String name) {
 		systemDao.deleteSystem(name);
+	}
+
+	@Transactional
+	public SystemModel getSystemByName(String name) {
+		return systemDao.getSystemByName(name);
 	}
 }

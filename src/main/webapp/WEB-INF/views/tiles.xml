@@ -11,11 +11,6 @@
 		<put-attribute name="body" value="" />
 		<put-attribute name="footer" value="/WEB-INF/views/tiles/template/defaultFooter.jsp" />
 	</definition>
-	<!-- Active Contracts -->
-	<definition name="activeContracts" extends="base-definition">
-		<put-attribute name="title" value="Aktywne umowy" />
-		<put-attribute name="body" value="/WEB-INF/views/pages/activeContracts.jsp" />
-	</definition>
 	<!-- All Contracts -->
 	<definition name="contracts" extends="base-definition">
 		<put-attribute name="title" value="Wszystkie umowy" />
@@ -60,5 +55,10 @@
 	<definition name="deleteSystem" extends="base-definition">
 		<put-attribute name="title" value="Usuń system" />
 		<put-attribute name="body" value="/WEB-INF/views/pages/deleteSystem.jsp" />
+	<!-- Success -->
+	</definition>
+		<definition name="success" extends="base-definition">
+		<put-attribute name="title" value="Sukces" />
+		<put-attribute name="body" value="/WEB-INF/views/pages/success.jsp" />
 	</definition>
 </tiles-definitions>

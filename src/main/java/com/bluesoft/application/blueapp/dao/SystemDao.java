@@ -5,6 +5,8 @@ import java.util.List;
 import com.bluesoft.application.blueapp.model.SystemModel;
 
 public interface SystemDao {
+	
+	public SystemModel getSystemByName(String name);
 
 	public void addSystem(SystemModel systemModel);
 	

@@ -1,21 +1,29 @@
 package com.bluesoft.application.blueapp.model;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
-
+/**
+ * @author Victor Chukwu
+ *
+ */
 @Entity
 @Table(name="SYSTEMS")
-public class SystemModel {
+public class SystemModel implements Serializable  {
 
-	@Id
+	private static final long serialVersionUID = 1L;
+
 	@Column(name = "ID")
 	@GeneratedValue
-	String id;
+	Long id;
 	
+	@Id
 	@Column(name = "NAME")
 	@NotNull(message= "{NotNull.system.name.validation}")
 	String name;
@@ -32,10 +40,21 @@ public class SystemModel {
 	@NotNull(message= "{NotNull.system.owner.validation}")
 	String owner;
 	
-	public String getId() {
+	public SystemModel() {
+		super();
+	}
+	
+	public SystemModel(String name, String description, String technologies, String owner) {
+		this.name = name;
+		this.description = description;
+		this.technologies = technologies;
+		this.owner = owner;
+	}
+	
+	public Long getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getName() {
@@ -61,5 +80,11 @@ public class SystemModel {
 	}
 	public void setOwner(String owner) {
 		this.owner = owner;
+	}
+
+	@Override
+	public String toString() {
+		return "SystemModel [id=" + id + ", name=" + name + ", description=" + description + ", technologies="
+				+ technologies + ", owner=" + owner + "]";
 	}
 }

@@ -22,23 +22,23 @@
 			});
 		});
 	</script>
-
+	
 </head>
 <body>
         <header id="header">
-            <tiles:insertAttribute name="header" />
+            <tiles:insertAttribute name="header"/>
         </header>
      	<br>
         <section id="menu">
-            <tiles:insertAttribute name="menu" />
+            <tiles:insertAttribute name="menu"/>
         </section>
         <br><br>
         <section id="site-content">
-            <tiles:insertAttribute name="body" />
+            <tiles:insertAttribute name="body"/>
         </section>
         <br><br>
         <footer id="footer">
-            <tiles:insertAttribute name="footer" />
+            <tiles:insertAttribute name="footer"/>
         </footer>
 </body>
 </html>

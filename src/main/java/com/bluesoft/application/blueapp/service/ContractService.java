@@ -8,7 +8,11 @@ public interface ContractService {
 
 	public void addContract(Contract contract);
 	
+	public Contract getContractByNumber(String number);
+	
 	public List<Contract> getAllContracts();	
+	
+	public List<Contract> getAllActiveContracts();
 	
 	public void updateContract(Contract contract);
 	

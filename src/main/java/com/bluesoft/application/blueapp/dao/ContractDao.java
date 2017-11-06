@@ -6,9 +6,13 @@ import com.bluesoft.application.blueapp.model.Contract;
 
 public interface ContractDao {
 	
+	public Contract getContractByNumber(String number);
+	
 	public void addContract(Contract contract);
 	
 	public List<Contract> getAllContracts();	
+	
+	public List<Contract> getAllActiveContracts();
 	
 	public void updateContract(Contract contract);
 	

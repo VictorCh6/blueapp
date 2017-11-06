@@ -14,9 +14,13 @@ import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import static org.hibernate.cfg.Environment.*;
 
+import com.bluesoft.application.blueapp.converter.SystemNameToSystemConverter;
 import com.bluesoft.application.blueapp.model.Contract;
 import com.bluesoft.application.blueapp.model.SystemModel;
-
+/**
+ * @author Victor Chukwu
+ *
+ */
 @Configuration
 @PropertySource("classpath:db.properties")
 @EnableTransactionManagement
@@ -51,7 +55,7 @@ public class AppConfig {
 		props.put(C3P0_MAX_STATEMENTS, env.getProperty("hibernate.c3p0.max_statements"));
 		
 		factoryBean.setHibernateProperties(props);
-		factoryBean.setAnnotatedClasses(Contract.class, SystemModel.class);
+		factoryBean.setAnnotatedClasses(Contract.class, SystemModel.class, SystemNameToSystemConverter.class);
 		return factoryBean;
 	}
 	

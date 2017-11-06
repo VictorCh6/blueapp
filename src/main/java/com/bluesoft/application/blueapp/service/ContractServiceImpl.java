@@ -8,7 +8,10 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.bluesoft.application.blueapp.dao.ContractDao;
 import com.bluesoft.application.blueapp.model.Contract;
-
+/**
+ * @author Victor Chukwu
+ *
+ */
 @Service
 public class ContractServiceImpl implements ContractService {
 	
@@ -33,5 +36,15 @@ public class ContractServiceImpl implements ContractService {
 	@Transactional
 	public void deactivateContract(Contract contract) {
 		contractDao.deactivateContract(contract);
+	}
+
+	@Transactional(readOnly = true)
+	public List<Contract> getAllActiveContracts() {
+		return contractDao.getAllActiveContracts();
+	}
+
+	@Transactional
+	public Contract getContractByNumber(String number) {
+		return contractDao.getContractByNumber(number);
 	}
 }
