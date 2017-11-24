@@ -4,11 +4,11 @@
 <section class="container text-center">
 	<form:form action="updateSystem" method="post" modelAttribute="system" class="form-horizontal">
 		<fieldset>
-			<legend>Dodaj system</legend>
+			<legend>Aktualizuj system</legend>
 			<div class=form-group>
 				<label>Nazwa</label>
 				<div>
-					<form:input path="name" />
+					<form:input path="name" readonly="true"/>	
 					<form:errors path="name" cssClass="error" />
 				</div>
 			</div>
@@ -34,7 +34,7 @@
 				</div>
 			</div>
 			<div class=form-group>
-				<input type="submit" id="btnAdd" class="btn btn-primary" value ="Update"/>
+				<input type="submit" id="btnAdd" class="btn btn-primary" value ="Aktualizuj"/>
 			</div>
 		</fieldset>
 	</form:form>
